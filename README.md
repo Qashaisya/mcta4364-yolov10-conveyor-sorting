@@ -21,14 +21,14 @@ This project develops a real-time vision-based object detection pipeline using *
 
 ## Repository Structure
 ```text
-├── assets/                  # System pipeline diagram & report figures
+├── assets/                  # System pipeline diagram 
 ├── notebooks/
 │   ├── 01_dataset_eda.ipynb       # Dataset exploration & class distribution (Person B)
 │   └── 02_yolov10_baseline.ipynb  # YOLOv10-N training & validation on Colab T4 (Person C)
 ├── .gitignore
 ├── README.md
 └── requirements.txt
-
+```
 ## DataSet EDA
 
 Prerequisites :
