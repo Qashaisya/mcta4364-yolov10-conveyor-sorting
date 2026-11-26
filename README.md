@@ -47,3 +47,17 @@ Step 2: Install Dependencies and Download the Dataset
 
 Step 3: Run the EDA Script
 
+Step 4: Download EDA Output Files and Notebook
+
+1. Open the Files panel (folder icon) on the left sidebar of Google Colab.
+
+2. Expand the eda_outputs/ folder and download the generated files:
+    i. class_distribution.png
+   ii. sample_1.jpg through sample_6.jpg
+
+3. Download the notebook itself via File -> Download -> Download .ipynb (for example, saving it as 01_dataset_eda.ipynb).
+
+Step 5: Clean Up Before Publishing to GitHub
+
+1. Before pushing your notebook and files to GitHub:
+Ensure no real API key or sensitive credentials are hardcoded in any code cell or cell output.
