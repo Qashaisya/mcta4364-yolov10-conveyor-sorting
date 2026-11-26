@@ -28,3 +28,22 @@ This project develops a real-time vision-based object detection pipeline using *
 ├── .gitignore
 ├── README.md
 └── requirements.txt
+
+## DataSet EDA
+
+Prerequisites :
+1. A Google account with access to Google Colab.
+2. A Roboflow account with access to the dataset workspace (custom-3w4p0), project (conveyor-belt-object-detection-ehaa8), and Version 9, along with a valid Roboflow API key.
+
+Step 1: Store Your Roboflow API Key in Colab Secrets
+Open your notebook in Google Colab.
+
+1. Click the Secrets icon (key icon) on the left sidebar.
+2. Click + Add new secret.
+3. Set Name to ROBOFLOW_API_KEY and Value to your actual Roboflow API key (without quotation marks).
+4. Toggle Notebook access to ON.
+
+Step 2: Install Dependencies and Download the Dataset
+
+Step 3: Run the EDA Script
+
