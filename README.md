@@ -20,6 +20,7 @@ This project develops a real-time vision-based object detection pipeline using *
 ![System Pipeline Diagram](assets/pipeline_diagram.png)
 
 ## Repository Structure
+```
 ├── assets/
 │   └── pipeline_diagram.png       # End-to-end system pipeline diagram
 ├── notebooks/
