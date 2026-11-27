@@ -20,12 +20,13 @@ This project develops a real-time vision-based object detection pipeline using *
 ![System Pipeline Diagram](assets/pipeline_diagram.png)
 
 ## Repository Structure
-```text
-├── assets/                  # System pipeline diagram 
+├── assets/
+│   └── pipeline_diagram.png       # End-to-end system pipeline diagram
 ├── notebooks/
-│   ├── 01_dataset_eda.ipynb       # Dataset exploration & class distribution (Person B)
-│   └── 02_yolov10_baseline.ipynb  # YOLOv10-N training & validation on Colab T4 (Person C)
+│   └── 02_yolov10_baseline.ipynb  # YOLOv10-N training & evaluation on Colab T4
+├── results/                       # YOLOv10-N baseline plots & qualitative examples
 ├── .gitignore
+├── 01_dataset_eda.ipynb           # Dataset exploration & class distribution
 ├── README.md
 └── requirements.txt
 ```
