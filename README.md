@@ -61,3 +61,20 @@ Step 5: Clean Up Before Publishing to GitHub
 
 1. Before pushing your notebook and files to GitHub:
 Ensure no real API key or sensitive credentials are hardcoded in any code cell or cell output.
+
+## Environment Setup
+
+The YOLOv10-N baseline was developed and executed in **Google Colab** using an **NVIDIA Tesla T4 GPU** runtime (`Runtime -> Change runtime type -> T4 GPU`), which does not require local GPU drivers or manual CUDA installation.
+
+Key dependencies installed in the notebook environment:
+* **Python** (Google Colab default environment)
+* **Ultralytics (`ultralytics`)** for YOLOv10-N (`yolov10n.pt`) training and test/validation evaluation
+* **Roboflow (`roboflow`)** for downloading version 9 of `conveyor-belt-object-detection-ehaa8` (`custom-3w4p0`) in `yolov8` format
+
+## How to Run the Baseline
+
+1. Open `notebooks/02_yolov10_baseline.ipynb` in **Google Colab** and set the runtime to **T4 GPU** (`Runtime -> Change runtime type -> T4 GPU`).
+2. Run the package installation cell (`!nvidia-smi` and `!pip install -q ultralytics roboflow`).
+3. In the dataset download cell, replace `"YOUR_ROBOFLOW_API_KEY"` with your own Roboflow API key (from Roboflow **Settings -> Roboflow API**) and run the cell to download version 9 of `conveyor-belt-object-detection-ehaa8` in `yolov8` format.
+4. Run the training and evaluation cell to fine-tune `yolov10n.pt` (`epochs=30`, `imgsz=640`, `batch=16`, `seed=42`, `plots=True`) and evaluate on the `test` split (falling back to `val` if no `test` split is present), reporting Precision, Recall, F1-Score, mAP@50, mAP@50-95, and inference speed (`ms/img`).
+5. Run the export cell to zip `/content/runs/detect` into `baseline_results.zip` and download it to inspect plots (`confusion_matrix.png`, `PR_curve.png`, `results.png`) and prediction batches.
